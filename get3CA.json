@@ -1,0 +1,31 @@
+{
+    "pipeline": {
+      "name": "get3CA"
+    },
+    "transform": {
+      "image": "bhklab/pharmacogx2.0:v4",
+      "cmd": [
+        "Rscript", 
+        "/pfs/get3CA/get3CA.R"]
+      },   
+    "resource_requests": {
+      "memory": "8G"
+    },
+    "input": {
+      "cross": [
+        {
+          "git": {
+            "url": "https://github.com/BHKLAB-Pachyderm/get3CA.git",
+            "name": "",
+            "branch": "main"
+          }
+        },
+        {
+            "pfs": {
+                "repo": "download3CAData",
+                "glob": "/"
+            }
+        }
+      ]
+    }
+}

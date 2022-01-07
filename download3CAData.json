@@ -1,0 +1,25 @@
+{
+    "pipeline": {
+      "name": "download3CAData"
+    },
+    "transform": {
+      "image": "bhklab/pharmacogx2.0:v4",
+      "cmd": [
+        "Rscript", 
+        "/pfs/download3CAData/download3CAData.R"]
+      },   
+    "resource_requests": {
+      "memory": "4G"
+    },
+    "input": {
+      "cross": [
+        {
+          "git": {
+            "url": "https://github.com/BHKLAB-Pachyderm/download3CAData.git",
+            "name": "",
+            "branch": "main"
+          }
+        }
+      ]
+    }
+}
