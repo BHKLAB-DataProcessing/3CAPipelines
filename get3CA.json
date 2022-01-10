@@ -9,7 +9,7 @@
         "/pfs/get3CA/get3CA.R"]
       },   
     "resource_requests": {
-      "memory": "4G"
+      "memory": "6G"
     },
     "input": {
       "cross": [
